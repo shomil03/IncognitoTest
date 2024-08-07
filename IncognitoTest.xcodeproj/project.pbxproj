@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F8700212C63065D00514FAC /* SideBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700202C63065C00514FAC /* SideBarMenu.swift */; };
+		4F8700262C6306A800514FAC /* SideBarProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700252C6306A800514FAC /* SideBarProfile.swift */; };
+		4F8700282C6307F800514FAC /* SideBarIncognito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700272C6307F800514FAC /* SideBarIncognito.swift */; };
+		4F87002A2C630AE700514FAC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700292C630AE700514FAC /* ViewModel.swift */; };
+		4F87002E2C63287900514FAC /* FirstSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87002D2C63287900514FAC /* FirstSheet.swift */; };
+		4F8700312C632D3B00514FAC /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700302C632D3B00514FAC /* ButtonView.swift */; };
+		4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700322C63746B00514FAC /* SecondSheet.swift */; };
+		4F8700352C63750E00514FAC /* BoxTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700342C63750E00514FAC /* BoxTextView.swift */; };
 		4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */; };
 		4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B30D2C627C3500E868CF /* ContentView.swift */; };
 		4FB2B3102C627C3700E868CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB2B30F2C627C3700E868CF /* Assets.xcassets */; };
@@ -14,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F8700202C63065C00514FAC /* SideBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenu.swift; sourceTree = "<group>"; };
+		4F8700252C6306A800514FAC /* SideBarProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarProfile.swift; sourceTree = "<group>"; };
+		4F8700272C6307F800514FAC /* SideBarIncognito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarIncognito.swift; sourceTree = "<group>"; };
+		4F8700292C630AE700514FAC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4F87002D2C63287900514FAC /* FirstSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSheet.swift; sourceTree = "<group>"; };
+		4F8700302C632D3B00514FAC /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		4F8700322C63746B00514FAC /* SecondSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSheet.swift; sourceTree = "<group>"; };
+		4F8700342C63750E00514FAC /* BoxTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxTextView.swift; sourceTree = "<group>"; };
 		4FB2B3082C627C3500E868CF /* IncognitoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncognitoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoTestApp.swift; sourceTree = "<group>"; };
 		4FB2B30D2C627C3500E868CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +48,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F8700222C63067300514FAC /* SideBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4F8700202C63065C00514FAC /* SideBarMenu.swift */,
+				4F8700272C6307F800514FAC /* SideBarIncognito.swift */,
+				4F87002C2C6327D800514FAC /* IncognitoSheeets */,
+				4F8700252C6306A800514FAC /* SideBarProfile.swift */,
+			);
+			path = SideBarMenu;
+			sourceTree = "<group>";
+		};
+		4F87002C2C6327D800514FAC /* IncognitoSheeets */ = {
+			isa = PBXGroup;
+			children = (
+				4F87002D2C63287900514FAC /* FirstSheet.swift */,
+				4F8700322C63746B00514FAC /* SecondSheet.swift */,
+			);
+			path = IncognitoSheeets;
+			sourceTree = "<group>";
+		};
+		4F87002F2C632D0800514FAC /* Usable Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F8700302C632D3B00514FAC /* ButtonView.swift */,
+				4F8700342C63750E00514FAC /* BoxTextView.swift */,
+			);
+			path = "Usable Views";
+			sourceTree = "<group>";
+		};
 		4FB2B2FF2C627C3500E868CF = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +96,11 @@
 		4FB2B30A2C627C3500E868CF /* IncognitoTest */ = {
 			isa = PBXGroup;
 			children = (
+				4F87002F2C632D0800514FAC /* Usable Views */,
 				4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */,
+				4F8700292C630AE700514FAC /* ViewModel.swift */,
 				4FB2B30D2C627C3500E868CF /* ContentView.swift */,
+				4F8700222C63067300514FAC /* SideBarMenu */,
 				4FB2B30F2C627C3700E868CF /* Assets.xcassets */,
 				4FB2B3112C627C3700E868CF /* Preview Content */,
 			);
@@ -137,8 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */,
+				4F87002A2C630AE700514FAC /* ViewModel.swift in Sources */,
 				4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */,
+				4F8700312C632D3B00514FAC /* ButtonView.swift in Sources */,
+				4F8700282C6307F800514FAC /* SideBarIncognito.swift in Sources */,
+				4F8700212C63065D00514FAC /* SideBarMenu.swift in Sources */,
+				4F8700262C6306A800514FAC /* SideBarProfile.swift in Sources */,
+				4F87002E2C63287900514FAC /* FirstSheet.swift in Sources */,
 				4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */,
+				4F8700352C63750E00514FAC /* BoxTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

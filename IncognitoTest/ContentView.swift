@@ -8,15 +8,51 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var viewmodel = ViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            ZStack{
+                if(viewmodel.isShowingSideMenu){
+                    HStack{
+                        SideBarMenu(viewmodel: viewmodel)
+                    }
+                }
+                ZStack{
+                    VStack {
+                        
+                        Text("Home View")
+                    }
+                }
+                .toolbar{
+                    if(!viewmodel.isShowingSideMenu){
+                        ToolbarItem(placement: .topBarLeading){
+                            Button(action: {
+                                viewmodel.isShowingSideMenu.toggle()
+                            }, label: {
+                                Label("", systemImage : "line.3.horizontal" )
+                                    .labelsHidden()
+                            })
+                            .transition(.slide)
+                            .animation(.easeInOut(duration: 2), value: viewmodel.isShowingSideMenu)
+                        }
+                    }
+                }
+                .sheet(item: $viewmodel.sheetType, content: {sheet in
+                    switch sheet{
+                        case .first:
+                            FirstSheet()
+                                .presentationDetents([.medium])
+                        case .second:
+                            FirstSheet()
+                        case .third:
+                            FirstSheet()
+                    }
+                })
+            }
+            
         }
-        .padding()
     }
+    
 }
 
 #Preview {
