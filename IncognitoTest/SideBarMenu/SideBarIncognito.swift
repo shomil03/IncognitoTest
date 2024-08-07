@@ -21,7 +21,6 @@ struct SideBarIncognito: View {
         }
         .onTapGesture {
             viewmodel.selectedMenu = .incognito
-            viewmodel.isShowingSheet = true
             viewmodel.sheetType = .first
         }
     }

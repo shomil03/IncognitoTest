@@ -40,12 +40,13 @@ struct ContentView: View {
                 .sheet(item: $viewmodel.sheetType, content: {sheet in
                     switch sheet{
                         case .first:
-                            FirstSheet()
+                            FirstSheet(viewmodel: $viewmodel)
                                 .presentationDetents([.medium])
                         case .second:
-                            FirstSheet()
+                            SecondSheet(viewmodel: $viewmodel)
                         case .third:
-                            FirstSheet()
+                            ThirdSheet()
+                                .presentationDetents([.medium])
                     }
                 })
             }

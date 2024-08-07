@@ -22,6 +22,4 @@ class ViewModel {
     var isShowingSideMenu = false
     var selectedMenu : MenuTypes = .none
     var sheetType : SheetTypes?
-    var showingIncognitoSheet = false
-    var isShowingSheet = false
 }

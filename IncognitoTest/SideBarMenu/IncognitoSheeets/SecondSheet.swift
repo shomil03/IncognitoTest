@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SecondSheet: View {
+    @Binding var viewmodel : ViewModel
     var bomberPara = "This will allow you to delete all the posts, comments & interactions done while you were in incognito mode"
     var normalPara = "This will allow you to keep all the posts, comments & interactions done while you were in incognito mode"
     var body: some View {
@@ -18,16 +19,36 @@ struct SecondSheet: View {
             BoxTextView(title: "Bomber Mode", paragraph: bomberPara)
                 .padding()
             BoxTextView(title: "Normal Mode", paragraph: normalPara)
+                .padding()
             
             
             Rectangle()
                 .frame(height: 1)
                 .padding()
             
+            TimeSpanView()
+                .padding(.horizontal)
+            
+            Button(action: {
+                viewmodel.sheetType = .third
+            }, label: {
+                ButtonView(text: "Done")
+            })
+            .padding(.top)
         }
+        
     }
 }
-
+struct TimeSpanView : View {
+    var body: some View {
+        HStack{
+            Text("Initial Timespan")
+            Spacer()
+            Text("5 mins")
+        }
+        .padding()
+    }
+}
 #Preview {
-    SecondSheet()
+    SecondSheet(viewmodel: .constant(ViewModel()))
 }
