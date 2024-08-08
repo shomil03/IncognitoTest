@@ -33,6 +33,7 @@ struct FirstSheet: View {
                 ButtonView(text: "GET IT!")
             })
             .padding()
+            .padding(.top)
             
         }
     }

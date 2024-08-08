@@ -20,6 +20,7 @@ struct SideBarIncognito: View {
                 .fontWeight(.semibold)
         }
         .onTapGesture {
+            viewmodel.isShowingSideMenu = false
             viewmodel.selectedMenu = .incognito
             viewmodel.sheetType = .first
         }

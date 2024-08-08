@@ -19,7 +19,15 @@ enum SheetTypes : String , Identifiable{
 }
 @Observable
 class ViewModel {
-    var isShowingSideMenu = false
+    var opacity = 0.1
+    var viewDisabled = false
+    var isShowingSideMenu = false{
+        didSet{
+            viewDisabled.toggle()
+            opacity = opacity == 0.1 ? 0.5 : 0.1
+        }
+    }
     var selectedMenu : MenuTypes = .none
     var sheetType : SheetTypes?
+    
 }

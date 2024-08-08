@@ -15,17 +15,21 @@ struct SideBarMenu: View {
                 VStack(alignment: .leading){
                     VStack(){
                         SideBarProfile()
+                            .foregroundStyle(Color.white)
                     }
                     .padding()
                     
                     VStack{
                         SideBarIncognito(viewmodel: viewmodel)
+                            .foregroundStyle(Color.white)
                     }
                     .padding(10)
                     Spacer()
                 }
                 .frame(width: 270)
+                .background(Color.black)
                 Spacer()
+                
             }
         }
     }

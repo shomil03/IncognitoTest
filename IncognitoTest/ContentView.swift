@@ -12,28 +12,36 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                if(viewmodel.isShowingSideMenu){
-                    HStack{
-                        SideBarMenu(viewmodel: viewmodel)
-                    }
-                }
                 ZStack{
-                    VStack {
-                        
-                        Text("Home View")
+                    ScrollView {
+                        ForEach(0 ..< 5){_ in
+                            Rectangle()
+                                .frame(width: 300 , height: 200)
+                            Text("Post")
+                        }
+//                        Text("Home View")
+//                        Button("tap me"){}
+
                     }
+                    .scrollIndicators(.hidden)
+                    .disabled(viewmodel.viewDisabled)
+//                    .border(Color.black)
+
                 }
                 .toolbar{
                     if(!viewmodel.isShowingSideMenu){
                         ToolbarItem(placement: .topBarLeading){
                             Button(action: {
-                                viewmodel.isShowingSideMenu.toggle()
+                                withAnimation(.easeOut){
+                                    viewmodel.isShowingSideMenu.toggle()
+                                }
+                                
                             }, label: {
                                 Label("", systemImage : "line.3.horizontal" )
                                     .labelsHidden()
                             })
-                            .transition(.slide)
-                            .animation(.easeInOut(duration: 2), value: viewmodel.isShowingSideMenu)
+                            
+                            
                         }
                     }
                 }
@@ -49,7 +57,24 @@ struct ContentView: View {
                                 .presentationDetents([.medium])
                     }
                 })
+                if(viewmodel.isShowingSideMenu){
+                    HStack{
+                        SideBarMenu(viewmodel: viewmodel)
+                        Color.secondary.opacity(0.01)
+                            .ignoresSafeArea()
+                            .padding(.leading , -8)
+                            .onTapGesture {
+                                withAnimation(.easeOut){
+                                    viewmodel.isShowingSideMenu = false
+                                }
+                                
+                            }
+                        
+                    }
+                    .transition(.move(edge: .leading))
+                }
             }
+            
             
         }
     }
