@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
-
+//import
 struct ContentView: View {
     @State var viewmodel = ViewModel()
+    @State var user = User()
     var body: some View {
         NavigationStack{
             ZStack{
@@ -17,6 +18,7 @@ struct ContentView: View {
                         ForEach(0 ..< 5){_ in
                             Rectangle()
                                 .frame(width: 300 , height: 200)
+                                .foregroundStyle(Color.gray)
                             Text("Post")
                         }
 //                        Text("Home View")
@@ -29,7 +31,7 @@ struct ContentView: View {
 
                 }
                 .toolbar{
-                    if(!viewmodel.isShowingSideMenu){
+//                    if(!viewmodel.isShowingSideMenu){
                         ToolbarItem(placement: .topBarLeading){
                             Button(action: {
                                 withAnimation(.easeOut){
@@ -43,7 +45,7 @@ struct ContentView: View {
                             
                             
                         }
-                    }
+//                    }
                 }
                 .sheet(item: $viewmodel.sheetType, content: {sheet in
                     switch sheet{
@@ -53,7 +55,7 @@ struct ContentView: View {
                         case .second:
                             SecondSheet(viewmodel: $viewmodel)
                         case .third:
-                            ThirdSheet()
+                            ThirdSheet(user: $user)
                                 .presentationDetents([.medium])
                     }
                 })

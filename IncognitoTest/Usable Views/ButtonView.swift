@@ -11,11 +11,13 @@ struct ButtonView: View {
     var text : String = "Button"
     var body: some View {
         Text(text)
-            .font(.headline)
-            .frame(width: 275 , height: 60)
-            .background(Color.secondary)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .foregroundStyle(Color.primary)
+            .font(.callout)
+            .fontWeight(.heavy)
+//            .frame(maxwidth: , height: 60)
+            .frame(maxWidth: .infinity , minHeight: 60)
+            .background(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 50))
+            .padding()
         
     }
 }

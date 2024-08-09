@@ -10,31 +10,41 @@ import SwiftUI
 struct FirstSheet: View {
     @Binding var viewmodel : ViewModel
 //    var modelView = ModelView
-    var about = "This is an ability in which you can be anonymous and use the application, you can post, comment and interact with the user."
-    var warning = "YOU SHOULD NOT USE THESE FEATURE FOR ANY WRONG MEANS."
+    var about = "This is an ability in which you can be anonymous and use the application, you can post, comment and interact with the users."
+    var warning = "YOU SHOULD NOT USE THIS FEATURE FOR ANY WRONG MEANS."
     var body: some View {
-        VStack{
-            Text("Incognito Mode")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.bottom)
-            Text(about)
-                .multilineTextAlignment(.center)
-                .padding(.bottom)
-            Text(warning)
-                .fontWeight(.semibold)
-                .foregroundStyle(Color.red)
-                .multilineTextAlignment(.center)
-                .padding(.bottom)
-            
-            Button(action: {
-                viewmodel.sheetType = .second
-            }, label: {
-                ButtonView(text: "GET IT!")
-            })
-            .padding()
-            .padding(.top)
-            
+        ZStack{
+            Color.black.ignoresSafeArea()
+            VStack{
+                Spacer()
+                Text("Incognito Mode")
+                    .font(.title)
+                    .fontWeight(.bold)
+//                    .padding(.bottom)
+                    .foregroundStyle(Color.white)
+                Text(about)
+                    .foregroundStyle(Color.white)
+                    .multilineTextAlignment(.center)
+                    .padding()
+//                    .padding(.bottom)
+//                    .padding(.horizontal)
+                Text(warning)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(Color.red)
+                    .multilineTextAlignment(.center)
+//                    .padding()
+                    .padding(.horizontal)
+                Button(action: {
+                    viewmodel.sheetType = .second
+                }, label: {
+                    ButtonView(text: "GET IT!")
+                        .foregroundStyle(Color.black)
+//                        .background(Color.white)
+                        
+                })
+                .padding()
+//                .padding(.top)
+            }
         }
     }
 }

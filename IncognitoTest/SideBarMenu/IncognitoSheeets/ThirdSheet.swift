@@ -8,18 +8,26 @@
 import SwiftUI
 
 struct ThirdSheet: View {
+    @Binding var user : User
     var body: some View {
         VStack{
-            Text("Done!")
-                .font(.title)
+            Text("DONE!")
+                .font(.largeTitle)
                 .fontWeight(.heavy)
                 .padding()
             Text("Enjoy your incognito mode!")
             
         }
+        .onAppear(){
+//            task{
+                 user.addUser()
+                
+            }
+//            IncognitoView()
+//        }
     }
 }
 
 #Preview {
-    ThirdSheet()
+    ThirdSheet(user : .constant(User()))
 }

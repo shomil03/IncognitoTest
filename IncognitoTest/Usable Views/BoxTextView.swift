@@ -10,20 +10,24 @@ import SwiftUI
 struct BoxTextView: View {
     var title : String = "Title"
     var paragraph : String = "some paragraph"
+    var background : Color = Color.blue
     var body: some View {
-        VStack{
+        VStack(alignment: .leading,spacing: 10){
             Text(title)
                 .font(.title2)
-                .fontWeight(.medium)
-                .padding(.bottom)
+                .fontWeight(.semibold)
+//                .padding(.bottom)
             Text(paragraph)
                 .font(.footnote)
+                .fontWeight(.medium)
                 .multilineTextAlignment(.leading)
         }
         .padding()
-//        .frame(width: 300)
-        .background(Color.blue)
+        .frame(maxWidth: .infinity)
+        
+        .background(background)
         .clipShape(RoundedRectangle(cornerRadius: 20))
+        .padding(.horizontal)
     }
 }
 

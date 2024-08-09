@@ -17,6 +17,13 @@ enum SheetTypes : String , Identifiable{
     case second
     case third
 }
+
+enum IncognitoModeTypes : String , Identifiable{
+    var id : String{rawValue}
+    case normal
+    case bomber
+    case none
+}
 @Observable
 class ViewModel {
     var opacity = 0.1
@@ -28,6 +35,7 @@ class ViewModel {
         }
     }
     var selectedMenu : MenuTypes = .none
+    var selectedIncognitoType : IncognitoModeTypes = .none
     var sheetType : SheetTypes?
     
 }
