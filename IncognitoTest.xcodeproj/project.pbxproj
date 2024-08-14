@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F243BDA2C6C6F1E00446E95 /* TopBarIncognito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F243BD92C6C6F1E00446E95 /* TopBarIncognito.swift */; };
 		4F30989D2C66237C00F72316 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F30989C2C66237C00F72316 /* GoogleService-Info.plist */; };
 		4F30989F2C66251D00F72316 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4F30989E2C66251D00F72316 /* FirebaseAnalytics */; };
 		4F3098A12C66251D00F72316 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3098A02C66251D00F72316 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F243BD92C6C6F1E00446E95 /* TopBarIncognito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarIncognito.swift; sourceTree = "<group>"; };
 		4F30989C2C66237C00F72316 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F3098CC2C663B3700F72316 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4F3098CE2C6640CD00F72316 /* IncognitoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				4F3098CC2C663B3700F72316 /* User.swift */,
 				4FB2B30D2C627C3500E868CF /* ContentView.swift */,
 				4F3098CE2C6640CD00F72316 /* IncognitoView.swift */,
+				4F243BD92C6C6F1E00446E95 /* TopBarIncognito.swift */,
 				4F8700222C63067300514FAC /* SideBarMenu */,
 				4FB2B30F2C627C3700E868CF /* Assets.xcassets */,
 				4FB2B3112C627C3700E868CF /* Preview Content */,
@@ -278,6 +281,7 @@
 				4F8700312C632D3B00514FAC /* ButtonView.swift in Sources */,
 				4F3098CF2C6640CD00F72316 /* IncognitoView.swift in Sources */,
 				4F8700282C6307F800514FAC /* SideBarIncognito.swift in Sources */,
+				4F243BDA2C6C6F1E00446E95 /* TopBarIncognito.swift in Sources */,
 				4F8700212C63065D00514FAC /* SideBarMenu.swift in Sources */,
 				4F8700372C63ADA800514FAC /* ThirdSheet.swift in Sources */,
 				4F8700262C6306A800514FAC /* SideBarProfile.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ThirdSheet: View {
     @Binding var user : User
+    @Binding var viewmodel : ViewModel
     var body: some View {
         VStack{
             Text("DONE!")
@@ -18,16 +19,13 @@ struct ThirdSheet: View {
             Text("Enjoy your incognito mode!")
             
         }
-        .onAppear(){
-//            task{
-                 user.addUser()
-                
-            }
-//            IncognitoView()
-//        }
+        .onTapGesture{
+            user.incognitoStarted = true
+            viewmodel.startTimer = true
+        }
     }
 }
 
 #Preview {
-    ThirdSheet(user : .constant(User()))
+    ThirdSheet(user : .constant(User()) , viewmodel: .constant(ViewModel()))
 }

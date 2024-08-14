@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import Firebase
+import Combine
+
 enum MenuTypes : String , Identifiable{
     var id: String {rawValue}
     case none
@@ -22,7 +25,7 @@ enum IncognitoModeTypes : String , Identifiable{
     var id : String{rawValue}
     case normal
     case bomber
-    case none
+//    case none
 }
 @Observable
 class ViewModel {
@@ -35,7 +38,11 @@ class ViewModel {
         }
     }
     var selectedMenu : MenuTypes = .none
-    var selectedIncognitoType : IncognitoModeTypes = .none
+    var selectedIncognitoType : IncognitoModeTypes = .bomber
     var sheetType : SheetTypes?
-    
+    var startTimer = false
+    var timer: Timer = Timer()
+    var cooldownTime = 0
+
+
 }
