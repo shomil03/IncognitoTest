@@ -9,6 +9,12 @@ import Foundation
 import Firebase
 import Combine
 
+enum feedType : String , Identifiable{
+    var id: String {rawValue}
+    case main
+    case trending
+    case explore
+}
 enum MenuTypes : String , Identifiable{
     var id: String {rawValue}
     case none
@@ -43,6 +49,6 @@ class ViewModel {
     var startTimer = false
     var timer: Timer = Timer()
     var cooldownTime = 0
-
+    var selectedFeedType : feedType = .main
 
 }

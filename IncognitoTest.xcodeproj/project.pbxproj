@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4F243BDA2C6C6F1E00446E95 /* TopBarIncognito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F243BD92C6C6F1E00446E95 /* TopBarIncognito.swift */; };
+		4F2F4F0B2C6E62C50041D862 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4F0A2C6E62C50041D862 /* HomeContentView.swift */; };
+		4F2F4F0D2C6E63310041D862 /* ContentTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4F0C2C6E63310041D862 /* ContentTopView.swift */; };
+		4F2F4F0F2C6F2AF70041D862 /* ContentBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F4F0E2C6F2AF70041D862 /* ContentBottomView.swift */; };
 		4F30989D2C66237C00F72316 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F30989C2C66237C00F72316 /* GoogleService-Info.plist */; };
 		4F30989F2C66251D00F72316 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4F30989E2C66251D00F72316 /* FirebaseAnalytics */; };
 		4F3098A12C66251D00F72316 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3098A02C66251D00F72316 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -34,6 +37,9 @@
 		4F3098CB2C66251D00F72316 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 4F3098CA2C66251D00F72316 /* FirebaseVertexAI-Preview */; };
 		4F3098CD2C663B3700F72316 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3098CC2C663B3700F72316 /* User.swift */; };
 		4F3098CF2C6640CD00F72316 /* IncognitoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3098CE2C6640CD00F72316 /* IncognitoView.swift */; };
+		4F774B262C6D29FF007D2517 /* FeedTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F774B252C6D29FF007D2517 /* FeedTopBar.swift */; };
+		4F774B282C6D2A2D007D2517 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F774B272C6D2A2D007D2517 /* ProfileView.swift */; };
+		4F774B2A2C6D658E007D2517 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F774B292C6D658E007D2517 /* FeedType.swift */; };
 		4F8700212C63065D00514FAC /* SideBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700202C63065C00514FAC /* SideBarMenu.swift */; };
 		4F8700262C6306A800514FAC /* SideBarProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700252C6306A800514FAC /* SideBarProfile.swift */; };
 		4F8700282C6307F800514FAC /* SideBarIncognito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700272C6307F800514FAC /* SideBarIncognito.swift */; };
@@ -51,9 +57,15 @@
 
 /* Begin PBXFileReference section */
 		4F243BD92C6C6F1E00446E95 /* TopBarIncognito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarIncognito.swift; sourceTree = "<group>"; };
+		4F2F4F0A2C6E62C50041D862 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		4F2F4F0C2C6E63310041D862 /* ContentTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentTopView.swift; sourceTree = "<group>"; };
+		4F2F4F0E2C6F2AF70041D862 /* ContentBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBottomView.swift; sourceTree = "<group>"; };
 		4F30989C2C66237C00F72316 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4F3098CC2C663B3700F72316 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4F3098CE2C6640CD00F72316 /* IncognitoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoView.swift; sourceTree = "<group>"; };
+		4F774B252C6D29FF007D2517 /* FeedTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopBar.swift; sourceTree = "<group>"; };
+		4F774B272C6D2A2D007D2517 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4F774B292C6D658E007D2517 /* FeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedType.swift; sourceTree = "<group>"; };
 		4F8700202C63065C00514FAC /* SideBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarMenu.swift; sourceTree = "<group>"; };
 		4F8700252C6306A800514FAC /* SideBarProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarProfile.swift; sourceTree = "<group>"; };
 		4F8700272C6307F800514FAC /* SideBarIncognito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarIncognito.swift; sourceTree = "<group>"; };
@@ -104,6 +116,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F774B242C6D29E1007D2517 /* HomeFeedViews */ = {
+			isa = PBXGroup;
+			children = (
+				4F774B252C6D29FF007D2517 /* FeedTopBar.swift */,
+				4F774B272C6D2A2D007D2517 /* ProfileView.swift */,
+				4F774B292C6D658E007D2517 /* FeedType.swift */,
+				4F2F4F0A2C6E62C50041D862 /* HomeContentView.swift */,
+				4F2F4F0C2C6E63310041D862 /* ContentTopView.swift */,
+				4F2F4F0E2C6F2AF70041D862 /* ContentBottomView.swift */,
+			);
+			path = HomeFeedViews;
+			sourceTree = "<group>";
+		};
 		4F8700222C63067300514FAC /* SideBarMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +179,7 @@
 		4FB2B30A2C627C3500E868CF /* IncognitoTest */ = {
 			isa = PBXGroup;
 			children = (
+				4F774B242C6D29E1007D2517 /* HomeFeedViews */,
 				4F87002F2C632D0800514FAC /* Usable Views */,
 				4F8700292C630AE700514FAC /* ViewModel.swift */,
 				4F3098CC2C663B3700F72316 /* User.swift */,
@@ -275,18 +301,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2F4F0D2C6E63310041D862 /* ContentTopView.swift in Sources */,
 				4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */,
 				4F87002A2C630AE700514FAC /* ViewModel.swift in Sources */,
 				4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */,
 				4F8700312C632D3B00514FAC /* ButtonView.swift in Sources */,
 				4F3098CF2C6640CD00F72316 /* IncognitoView.swift in Sources */,
+				4F2F4F0F2C6F2AF70041D862 /* ContentBottomView.swift in Sources */,
 				4F8700282C6307F800514FAC /* SideBarIncognito.swift in Sources */,
 				4F243BDA2C6C6F1E00446E95 /* TopBarIncognito.swift in Sources */,
 				4F8700212C63065D00514FAC /* SideBarMenu.swift in Sources */,
+				4F774B282C6D2A2D007D2517 /* ProfileView.swift in Sources */,
+				4F2F4F0B2C6E62C50041D862 /* HomeContentView.swift in Sources */,
 				4F8700372C63ADA800514FAC /* ThirdSheet.swift in Sources */,
 				4F8700262C6306A800514FAC /* SideBarProfile.swift in Sources */,
 				4F3098CD2C663B3700F72316 /* User.swift in Sources */,
 				4F87002E2C63287900514FAC /* FirstSheet.swift in Sources */,
+				4F774B2A2C6D658E007D2517 /* FeedType.swift in Sources */,
+				4F774B262C6D29FF007D2517 /* FeedTopBar.swift in Sources */,
 				4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */,
 				4F8700352C63750E00514FAC /* BoxTextView.swift in Sources */,
 			);
