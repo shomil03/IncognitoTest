@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
+    var total : Double = 30
+    var elapsed : Double = 25
     var body: some View {
         ZStack{
 //            Color(lightDark)
@@ -19,9 +21,10 @@ struct ProfileView: View {
                 .foregroundStyle(
                     RadialGradient(colors: [Color(lightDark),Color(.white)], center: .center, startRadius: -10, endRadius: 100)
                 )
-            Arc(startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 90))
+            Arc(startAngle: Angle(degrees: 0), endAngle: Angle(degrees: (360/(total / elapsed))))
                 .fill(Color(.systemRed))
                 .frame(width: 40,height: 40)
+                .animation(.linear, value: elapsed)
             Label("", systemImage: "person.circle.fill")
                 .labelsHidden()
                 .offset(x: 5, y: -2)
@@ -34,8 +37,8 @@ struct Arc : Shape{
     var startAngle : Angle
     var endAngle : Angle
     func path(in rect: CGRect) -> Path {
-        var modifiedStartAngle = startAngle - Angle(degrees: 90)
-        var modifiedEndAngle = endAngle - Angle(degrees: 90)
+        let modifiedStartAngle = startAngle - Angle(degrees: 90)
+        let modifiedEndAngle = endAngle - Angle(degrees: 90)
         
         var path = Path()
         path.move(to: CGPoint(x: rect.midX, y: rect.midY))

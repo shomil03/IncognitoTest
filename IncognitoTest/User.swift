@@ -38,9 +38,6 @@ class User{
                 "endTime" : Timestamp(date: endTime)
             ],merge: true)
         }
-//        catch{
-//            print("Error while adding data")
-//        }
         
     }
     

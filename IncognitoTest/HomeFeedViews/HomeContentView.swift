@@ -15,6 +15,9 @@ struct HomeContentView: View {
                 .frame(maxWidth: .infinity , minHeight: 250 , idealHeight: 300 , maxHeight: 350)
                 .padding()
             ContentBottomView()
+//                .padding(.vertical)
+            ContentCommentView()
+                .padding(.vertical)
         }
     }
 }

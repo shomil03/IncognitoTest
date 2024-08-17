@@ -50,5 +50,6 @@ class ViewModel {
     var timer: Timer = Timer()
     var cooldownTime = 0
     var selectedFeedType : feedType = .main
+    var givenIncognitoTime = 90
 
 }

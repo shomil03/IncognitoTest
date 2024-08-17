@@ -11,7 +11,7 @@ struct IncognitoView: View {
     @Binding var viewmodel : ViewModel
     @Binding var user : User
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var coolDown = 90.0
+    @State var coolDown = 30.0
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
 //    var timer : AnyCancellable
     var body: some View {
@@ -19,8 +19,16 @@ struct IncognitoView: View {
             ZStack{
                 Color(lightDark)
                     .ignoresSafeArea()
+                    .onReceive(timer){_ in
+                        coolDown -= 1
+                        print(coolDown)
+                        if(coolDown <= 0){
+                            user.incognitoStarted = false
+                        }
+                    }
                 VStack {
-                        FeedTopBar()
+//                    Text("\(coolDown)")
+                        FeedTopBar(elapsed: 30-coolDown)
                             .padding(.bottom)
                         FeedType()
                             .foregroundStyle(Color(.white))
@@ -33,6 +41,8 @@ struct IncognitoView: View {
                             }
                         }
                     }
+                    
+                    
                     
                     
                     
@@ -71,13 +81,17 @@ struct IncognitoView: View {
                     //    //                        return from incognito view
                     //                        }
                     //                }
+                }.onAppear{
+                    printh()
+                    //            coolDown = (user.remainingTime)
+                    coolDown = user.calculateTimeDifferences()
                 }
             }
-            .onAppear{
-                //            coolDown = (user.remainingTime)
-                coolDown = user.calculateTimeDifferences()
-            }
+            
         }
+    }
+    func printh(){
+        print("here")
     }
 }
 

@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct FeedTopBar: View {
+    var elapsed : Double = 40
     var body: some View {
         HStack{
-            ProfileView()
+            ProfileView(total: 30 , elapsed: elapsed)
                 .padding(.horizontal)
             Text("Incognito")
                 .font(.title)
