@@ -9,9 +9,10 @@ import SwiftUI
 
 struct FeedTopBar: View {
     var elapsed : Double = 40
+    @Binding var viewmodel : ViewModel
     var body: some View {
         HStack{
-            ProfileView(total: 30 , elapsed: elapsed)
+            ProfileView(total: 30 , elapsed: elapsed , viewmodel: $viewmodel)
                 .padding(.horizontal)
             Text("Incognito")
                 .font(.title)
@@ -36,5 +37,5 @@ struct FeedTopBar: View {
 }
 
 #Preview {
-    FeedTopBar()
+    FeedTopBar(viewmodel: .constant(ViewModel()))
 }

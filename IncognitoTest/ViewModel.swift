@@ -51,5 +51,6 @@ class ViewModel {
     var cooldownTime = 0
     var selectedFeedType : feedType = .main
     var givenIncognitoTime = 90
+    var isProfileViewTapped = false
 
 }

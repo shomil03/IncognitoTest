@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentCommentView: View {
     var comment : String = "Bringing the heat to California under 18 State swimming tials"
-    var largeComment : String = "Time to dry off and hit the road to Zandvoort"
+    var largeComment : String = "Time to dry off and hit the road to Zandvoort The lap that counted .Jump abroad for anyone and more long text"
+    var truncatedLength : Int = 100
+    @State var isExpanded = false
     var body: some View {
         VStack(alignment: .leading){
             HStack{
@@ -18,11 +20,29 @@ struct ContentCommentView: View {
                 Text("@xyz and 95 others awarded")
             }
             Text(comment)
-            Text(largeComment)
+            
+            Text(isExpanded ? largeComment : DemoComment)
+                .lineLimit(isExpanded ? nil : 2)
+            if(!isExpanded && largeComment.count > truncatedLength){
+                
+                Button(action: {
+                    withAnimation{
+                        isExpanded.toggle()
+                    }
+                }, label: {
+                    Label("more", image: "")
+                        .foregroundStyle(Color.gray)
+                })
+            }
+            
             Text("California.3 hours ago")
             
         }
     }
+    var DemoComment : String {
+        largeComment.prefix(truncatedLength) + ""
+    }
+    
 }
 struct CommentProfileView : View {
     var body: some View {

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SideBarMenu: View {
     var viewmodel : ViewModel
+    @State var count = 0
     var body: some View {
-        ZStack{
+        
             HStack{
                 VStack(alignment: .leading){
                     VStack(){
@@ -25,13 +26,16 @@ struct SideBarMenu: View {
                     }
                     .padding(10)
                     Spacer()
+//                    Button("Tap me \(count)"){
+//                        count+=1
+//                    }
                 }
                 .frame(width: 270)
                 .background(Color.black)
                 Spacer()
                 
             }
-        }
+        
     }
 }
 

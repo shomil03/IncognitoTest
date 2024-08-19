@@ -23,6 +23,7 @@ struct SideBarIncognito: View {
             viewmodel.isShowingSideMenu = false
             viewmodel.selectedMenu = .incognito
             viewmodel.sheetType = .first
+            print("tapped incogito")
         }
     }
 }
