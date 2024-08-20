@@ -8,23 +8,38 @@
 import SwiftUI
 
 struct SideBarMenu: View {
-    var viewmodel : ViewModel
+    @Binding var viewmodel : ViewModel
     @State var count = 0
     var body: some View {
         
             HStack{
                 VStack(alignment: .leading){
                     VStack(){
-                        SideBarProfile()
+                        SideBarProfile(viewmodel: $viewmodel)
                             .foregroundStyle(Color.white)
                     }
                     .padding()
-                    
-                    VStack{
-                        SideBarIncognito(viewmodel: viewmodel)
-                            .foregroundStyle(Color.white)
+                    .padding(.bottom)
+//                    VStack{
+                        
+//                            .foregroundStyle(Color.white)
+//                    }
+                    VStack(alignment: .leading,spacing: 30){SideBarIncognito(viewmodel: viewmodel)
+                        SideBarLabels(image: "rotate.3d.fill" , text: "Abilities")
+                        SideBarLabels(image: "chart.xyaxis.line", text: "Analytics")
+                        SideBarLabels(image: "stopwatch", text: "Your Activity")
+                        SideBarLabels(image: "bookmark", text: "Saved Posts")
+                        SideBarLabels(image: "person.3.fill", text: "Your groups")
+                        SideBarLabels(image: "face.smiling", text: "Close friend list")
+                        SideBarLabels(image: "message", text: "Questionnaire")
+                        SideBarLabels(image: "storefront", text: "Your eshop")
+                        SideBarLabels(image: "checkmark.seal", text: "Approvals")
+                        SideBarLabels(image: "wallet.pass.fill", text: "Wallet")
                     }
-                    .padding(10)
+                    .foregroundStyle(Color(.white))
+                    .font(.title3)
+                    .fontWeight(.medium)
+//                    .padding(10)
                     Spacer()
 //                    Button("Tap me \(count)"){
 //                        count+=1
@@ -40,5 +55,5 @@ struct SideBarMenu: View {
 }
 
 #Preview {
-    SideBarMenu(viewmodel: ViewModel())
+    SideBarMenu(viewmodel: .constant(ViewModel()))
 }

@@ -58,7 +58,7 @@ struct ContentView: View {
                     .presentationCornerRadius(100)
                     if(viewmodel.isShowingSideMenu){
                         HStack{
-                            SideBarMenu(viewmodel: viewmodel)
+                            SideBarMenu(viewmodel: $viewmodel)
                             Color.secondary.opacity(0.01)
                                 .ignoresSafeArea()
                                 .padding(.leading , -8)

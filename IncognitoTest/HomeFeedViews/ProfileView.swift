@@ -12,19 +12,21 @@ struct ProfileView: View {
     var total : Double = 30
     var elapsed : Double = 15
     @Binding var viewmodel : ViewModel
+    var width : CGFloat = 40
+    var height : CGFloat = 40
     var body: some View {
         ZStack{
 //            Color(lightDark)
 //                .ignoresSafeArea()
             
             Circle()
-                .frame(width: 40, height: 40)
+                .frame(width: width, height: height)
                 .foregroundStyle(
                     RadialGradient(colors: [Color(lightDark),Color(.white)], center: .center, startRadius: -10, endRadius: 100)
                 )
             Arc(startAngle: Angle(degrees: 0), endAngle: Angle(degrees: (360/(total / elapsed))))
                 .fill(Color(.systemRed))
-                .frame(width: 40,height: 40)
+                .frame(width: width,height: height)
                 .animation(.linear, value: elapsed)
             Label("", systemImage: "person.circle.fill")
                 .labelsHidden()

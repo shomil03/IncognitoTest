@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentCommentView: View {
     var comment : String = "Bringing the heat to California under 18 State swimming tials"
-    var largeComment : String = "Time to dry off and hit the road to Zandvoort The lap that counted .Jump abroad for anyone and more long text are there to come"
-    var truncatedLength : Int = 130
+    var largeComment : String = "Time to dry off and hit the road to Zandvoort The lap that counted .Jump abroad for anyone and more long text are there to come and some more text to check for more larger comment"
+    var truncatedLength : Int = 150
     @State var isExpanded = false
     var body: some View {
         VStack(alignment: .leading){

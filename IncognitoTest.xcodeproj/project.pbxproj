@@ -63,6 +63,7 @@
 		4FE490F42C73CD3F00243A0D /* DiscussionCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F32C73CD3F00243A0D /* DiscussionCommentView.swift */; };
 		4FE490F62C73EDCD00243A0D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F52C73EDCD00243A0D /* CustomTabBar.swift */; };
 		4FE490F82C74585100243A0D /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F72C74585100243A0D /* CustomTextFieldView.swift */; };
+		4FE490FA2C74731D00243A0D /* SideBarLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F92C74731D00243A0D /* SideBarLabels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		4FE490F32C73CD3F00243A0D /* DiscussionCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionCommentView.swift; sourceTree = "<group>"; };
 		4FE490F52C73EDCD00243A0D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		4FE490F72C74585100243A0D /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		4FE490F92C74731D00243A0D /* SideBarLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarLabels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +161,8 @@
 			children = (
 				4F8700202C63065C00514FAC /* SideBarMenu.swift */,
 				4F8700272C6307F800514FAC /* SideBarIncognito.swift */,
-				4F87002C2C6327D800514FAC /* IncognitoSheeets */,
 				4F8700252C6306A800514FAC /* SideBarProfile.swift */,
+				4F87002C2C6327D800514FAC /* IncognitoSheeets */,
 			);
 			path = SideBarMenu;
 			sourceTree = "<group>";
@@ -180,6 +182,7 @@
 			children = (
 				4F8700302C632D3B00514FAC /* ButtonView.swift */,
 				4F8700342C63750E00514FAC /* BoxTextView.swift */,
+				4FE490F92C74731D00243A0D /* SideBarLabels.swift */,
 			);
 			path = "Usable Views";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				4FE490EB2C71630D00243A0D /* CreateNewReelView.swift in Sources */,
 				4F774B2A2C6D658E007D2517 /* FeedType.swift in Sources */,
 				4F774B262C6D29FF007D2517 /* FeedTopBar.swift in Sources */,
+				4FE490FA2C74731D00243A0D /* SideBarLabels.swift in Sources */,
 				4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */,
 				4F8700352C63750E00514FAC /* BoxTextView.swift in Sources */,
 				4FE490F62C73EDCD00243A0D /* CustomTabBar.swift in Sources */,

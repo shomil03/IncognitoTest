@@ -9,6 +9,11 @@ import SwiftUI
 
 struct DiscussionCommentView: View {
     let comment = "Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book . It has survived not only five centuries."
+    @State var liked = false
+    @State var liked_count = 254
+    @State var disliked = false
+    @State var disliked_count = 50
+    var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
     var body: some View {
         HStack(alignment : .top){
             Image("ProfileImage")
@@ -26,18 +31,47 @@ struct DiscussionCommentView: View {
                         .labelsHidden()
                         .padding(.horizontal)
                 }
-                .padding(.top)
+//                .padding(.top)
                 Text(comment)
                     .font(.callout)
                     .padding(.trailing)
                     .padding(.vertical,8)
                 HStack{
                     
-                    Label("254", systemImage: "arrowshape.up")
+                    Label("\(liked_count)", systemImage: liked ? "arrowshape.up.fill" :  "arrowshape.up")
                         .font(.caption)
+                        .foregroundStyle(liked ? Color(.green) : Color(.white))
+                        .onTapGesture {
+                            liked.toggle()
+                            if(liked){
+                                liked_count += 1
+                                if(disliked){
+                                    disliked_count -= 1
+                                }
+                                disliked = false
+                            }
+                            else{
+                                liked_count -= 1
+                            }
+                        }
                     Spacer()
-                    Label("50" , systemImage: "arrowshape.down")
+                    Label("\(disliked_count)" , systemImage: disliked ?
+                          "arrowshape.down.fill" : "arrowshape.down")
                         .font(.caption)
+                        .foregroundStyle(disliked ? Color(.red) : Color(.white))
+                        .onTapGesture {
+                            disliked.toggle()
+                            if(disliked){
+                                disliked_count += 1
+                                if(liked){
+                                    liked_count -= 1
+                                }
+                                liked = false
+                            }
+                            else{
+                                disliked_count -= 1
+                            }
+                        }
                     Spacer()
                     Label("", systemImage: "square.and.arrow.up")
                         .labelsHidden()
@@ -45,10 +79,16 @@ struct DiscussionCommentView: View {
                     Spacer()
                     NavigationLink("show this discussion", destination: ContentUnavailableView("Not available right now", image: ""))
                         .font(.caption)
+                        .foregroundStyle(Color(.blue))
                     Spacer()
                 }
+                .animation(.easeIn, value: liked)
+                .animation(.easeIn, value: disliked)
             }
         }
+        .foregroundStyle(Color(.white))
+        .padding(.vertical)
+        .background(Color(lightDark))
     }
 }
 

@@ -13,11 +13,11 @@ struct SideBarIncognito: View {
         HStack{
             Image(systemName: "eye.slash.circle.fill")
                 .resizable()
-                .frame(width: 45,height: 45)
+                .frame(width: 30,height: 30)
                 .padding(.horizontal)
             Text("Incognito")
-                .font(.title2)
-                .fontWeight(.semibold)
+                .font(.title3)
+                .fontWeight(.medium)
         }
         .onTapGesture {
             viewmodel.isShowingSideMenu = false

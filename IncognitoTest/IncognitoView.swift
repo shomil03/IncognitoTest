@@ -54,7 +54,7 @@ struct IncognitoView: View {
                 .offset(x : viewmodel.isProfileViewTapped ? UIScreen.main.bounds.width * 0.55 : 0,y:0 )
                 if(viewmodel.isProfileViewTapped){
                     HStack{
-                        SideBarMenu(viewmodel: viewmodel)
+                        SideBarMenu(viewmodel: $viewmodel)
                         
                         
                         Color.primary.opacity(0.01)
@@ -76,7 +76,6 @@ struct IncognitoView: View {
             .onAppear{
                 coolDown = user.calculateTimeDifferences()
             }
-            
         }
     }
     func printh(){

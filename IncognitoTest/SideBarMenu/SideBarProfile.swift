@@ -8,18 +8,19 @@
 import SwiftUI
 
 struct SideBarProfile: View {
+    @Binding var viewmodel : ViewModel
     var body: some View {
         HStack{
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 60 , height: 60)
-                .padding(.horizontal)
-            VStack{
+            ProfileView(viewmodel: $viewmodel,width: CGFloat(60) , height: CGFloat(60))
+//                .resizable()
+//                .frame(width: 60 , height: 60)
+//                .padding(.horizontal)
+            VStack(alignment: .leading){
                 Text("Test User")
                     .font(.title2)
-                    .fontWeight(.semibold)
+                    .fontWeight(.bold)
                 Text("View Profile")
-                    .font(.callout)
+                    .font(.caption)
                     .opacity(0.7)
             }
             .padding(.horizontal)
@@ -28,5 +29,5 @@ struct SideBarProfile: View {
 }
 
 #Preview {
-    SideBarProfile()
+    SideBarProfile(viewmodel: .constant(ViewModel()))
 }
