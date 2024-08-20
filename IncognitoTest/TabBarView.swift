@@ -10,23 +10,35 @@ import SwiftUI
 struct TabBarView: View {
     @State var viewmodel = ViewModel()
     @State var user = User()
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.black
+//        UITabBar.appearance(). = UIColor.black
+        UITabBar.appearance().barTintColor = UIColor.white
+        
+    }
     var body: some View {
         TabView{
             IncognitoView(viewmodel: $viewmodel, user: $user)
                 .tabItem {
                     Label("" , systemImage: "house")
                         .labelsHidden()
+                        .font(.title2)
+                        .foregroundStyle(Color(.white))
                 }
             ReelView()
                 .tabItem{
                     Label("", systemImage: "play.display")
                         .labelsHidden()
+//                        .font(.title2)
+                        .foregroundStyle(Color(.white))
                 }
             CreateNewReelView()
                 .tabItem{
-                    Label("", systemImage: "plus")
-                        .font(.largeTitle)
-                        .labelsHidden()
+                    Image(systemName: "plus")
+                        .font(.system(size: 55))
+//                    Label("", systemImage: "plus")
+//                        .font(.largeTitle)
+//                        .labelsHidden()
                 }
             ZapView()
                 .tabItem{

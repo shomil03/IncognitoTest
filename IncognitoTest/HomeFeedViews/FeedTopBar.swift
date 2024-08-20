@@ -14,6 +14,7 @@ struct FeedTopBar: View {
         HStack{
             ProfileView(total: 30 , elapsed: elapsed , viewmodel: $viewmodel)
                 .padding(.horizontal)
+                .padding(.leading,3)
             Text("Incognito")
                 .font(.title)
                 .fontWeight(.bold)

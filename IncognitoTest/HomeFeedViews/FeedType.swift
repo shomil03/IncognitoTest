@@ -21,9 +21,10 @@ struct FeedType: View {
             Spacer()
             Label("", systemImage: "line.2.horizontal.decrease.circle.fill")
                 .labelsHidden()
-                .padding(.trailing)
+                .padding(.trailing,5)
             
         }
+        .font(.callout)
     }
 }
 

@@ -34,7 +34,7 @@ struct IncognitoView: View {
                         FeedType()
                             .foregroundStyle(Color(.white))
                             .padding(.bottom)
-                    ScrollView{
+                    ScrollView(){
                         LazyVStack{
                             ForEach(0 ..< 10){_ in
                                HomeContentView()
@@ -42,6 +42,13 @@ struct IncognitoView: View {
                             }
                         }
                     }
+                    .scrollIndicators(.hidden)
+                    
+//                    Spacer()
+//                    Button("here"){}
+//                    CustomTabBar()
+//                        .ignoresSafeArea()
+//                        .padding(.bottom)
                 }
                 .scaleEffect(viewmodel.isProfileViewTapped ? 0.75 : 1.0)
                 .offset(x : viewmodel.isProfileViewTapped ? UIScreen.main.bounds.width * 0.55 : 0,y:0 )
@@ -60,6 +67,11 @@ struct IncognitoView: View {
                 }
                 
             }
+//            .toolbar{
+//                ToolbarItem(placement: .bottomBar){
+//                    CustomTabBar()
+////                }
+//            }
             .animation(.spring , value: viewmodel.isProfileViewTapped)
             .onAppear{
                 coolDown = user.calculateTimeDifferences()

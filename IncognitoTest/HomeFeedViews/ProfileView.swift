@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
     var total : Double = 30
-    var elapsed : Double = 25
+    var elapsed : Double = 15
     @Binding var viewmodel : ViewModel
     var body: some View {
         ZStack{

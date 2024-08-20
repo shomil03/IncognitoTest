@@ -59,6 +59,10 @@
 		4FE490EB2C71630D00243A0D /* CreateNewReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490EA2C71630D00243A0D /* CreateNewReelView.swift */; };
 		4FE490ED2C71635F00243A0D /* ZapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490EC2C71635F00243A0D /* ZapView.swift */; };
 		4FE490F02C7163D100243A0D /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490EF2C7163D100243A0D /* StoreView.swift */; };
+		4FE490F22C73C09300243A0D /* DiscussionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F12C73C09300243A0D /* DiscussionView.swift */; };
+		4FE490F42C73CD3F00243A0D /* DiscussionCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F32C73CD3F00243A0D /* DiscussionCommentView.swift */; };
+		4FE490F62C73EDCD00243A0D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F52C73EDCD00243A0D /* CustomTabBar.swift */; };
+		4FE490F82C74585100243A0D /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490F72C74585100243A0D /* CustomTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,10 @@
 		4FE490EA2C71630D00243A0D /* CreateNewReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewReelView.swift; sourceTree = "<group>"; };
 		4FE490EC2C71635F00243A0D /* ZapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZapView.swift; sourceTree = "<group>"; };
 		4FE490EF2C7163D100243A0D /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
+		4FE490F12C73C09300243A0D /* DiscussionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionView.swift; sourceTree = "<group>"; };
+		4FE490F32C73CD3F00243A0D /* DiscussionCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionCommentView.swift; sourceTree = "<group>"; };
+		4FE490F52C73EDCD00243A0D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		4FE490F72C74585100243A0D /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,10 @@
 				4F2F4F0C2C6E63310041D862 /* ContentTopView.swift */,
 				4F2F4F102C6F47BB0041D862 /* ContentCommentView.swift */,
 				4F2F4F0E2C6F2AF70041D862 /* ContentBottomView.swift */,
+				4FE490F12C73C09300243A0D /* DiscussionView.swift */,
+				4FE490F72C74585100243A0D /* CustomTextFieldView.swift */,
+				4FE490F52C73EDCD00243A0D /* CustomTabBar.swift */,
+				4FE490F32C73CD3F00243A0D /* DiscussionCommentView.swift */,
 			);
 			path = HomeFeedViews;
 			sourceTree = "<group>";
@@ -343,7 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE490F42C73CD3F00243A0D /* DiscussionCommentView.swift in Sources */,
 				4F2F4F0D2C6E63310041D862 /* ContentTopView.swift in Sources */,
+				4FE490F22C73C09300243A0D /* DiscussionView.swift in Sources */,
 				4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */,
 				4F87002A2C630AE700514FAC /* ViewModel.swift in Sources */,
 				4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */,
@@ -364,11 +378,13 @@
 				4FE490F02C7163D100243A0D /* StoreView.swift in Sources */,
 				4F3098CD2C663B3700F72316 /* User.swift in Sources */,
 				4F87002E2C63287900514FAC /* FirstSheet.swift in Sources */,
+				4FE490F82C74585100243A0D /* CustomTextFieldView.swift in Sources */,
 				4FE490EB2C71630D00243A0D /* CreateNewReelView.swift in Sources */,
 				4F774B2A2C6D658E007D2517 /* FeedType.swift in Sources */,
 				4F774B262C6D29FF007D2517 /* FeedTopBar.swift in Sources */,
 				4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */,
 				4F8700352C63750E00514FAC /* BoxTextView.swift in Sources */,
+				4FE490F62C73EDCD00243A0D /* CustomTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

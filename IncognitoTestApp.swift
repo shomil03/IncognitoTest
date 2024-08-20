@@ -21,8 +21,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct IncognitoTestApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
+        @State var viewmodel = ViewModel()
+        @State var user = User()
         WindowGroup {
-            ContentView()
+//            ContentView()
+            IncognitoView(viewmodel: $viewmodel, user: $user)
         }
     }
 }

@@ -22,6 +22,7 @@ struct ContentTopView: View {
             Spacer()
             Label("", systemImage: "bookmark")
                 .labelsHidden()
+                .padding(.trailing, 10)
             Label("" , systemImage: "ellipsis")
                 .labelsHidden()
                 .rotationEffect(Angle(degrees: -90) , anchor: .leading)
