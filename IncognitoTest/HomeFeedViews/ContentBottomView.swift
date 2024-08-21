@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentBottomView: View {
+    @Binding var viewmodel : ViewModel
+    @Binding var user : User
     var body: some View {
         NavigationStack{
             ZStack{
@@ -22,7 +24,7 @@ struct ContentBottomView: View {
                     Label("", systemImage: "trophy")
                         .labelsHidden()
                     Spacer()
-                    NavigationLink(destination: DiscussionView(), label: {
+                    NavigationLink(destination: DiscussionView(viewmodel: $viewmodel, user: $user), label: {
                         Label("", systemImage: "ellipsis.bubble")
                             .labelsHidden()
                     })
@@ -41,5 +43,5 @@ struct ContentBottomView: View {
 }
 
 #Preview {
-    ContentBottomView()
+    ContentBottomView(viewmodel: .constant(ViewModel()), user: .constant(User()))
 }

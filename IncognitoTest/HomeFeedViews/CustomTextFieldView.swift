@@ -10,6 +10,8 @@ import SwiftUI
 struct CustomTextFieldView: View {
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
     @State var input : String = ""
+    @Binding var user : User
+    @Binding var viewmodel : ViewModel
     var body: some View {
         HStack{
             ZStack{
@@ -25,6 +27,11 @@ struct CustomTextFieldView: View {
                     .clipShape(Circle())
             }
             TextField("", text: $input)
+                .onSubmit {
+//                    user.saveComment(input , incognitoMode:viewmodel.selectedIncognitoType )
+                    user.saveComment(input, incognitoMode: .bomber)
+                }
+                .foregroundStyle(Color(.white))
             Image(systemName: "photo")
                 .foregroundStyle(Color(.white))
 //                .resizable()
@@ -47,5 +54,5 @@ struct CustomTextFieldView: View {
 }
 
 #Preview {
-    CustomTextFieldView()
+    CustomTextFieldView(user: .constant(User()) , viewmodel: .constant(ViewModel()))
 }

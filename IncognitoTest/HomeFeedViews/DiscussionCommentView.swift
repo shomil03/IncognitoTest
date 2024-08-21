@@ -8,25 +8,30 @@
 import SwiftUI
 
 struct DiscussionCommentView: View {
-    let comment = "Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book . It has survived not only five centuries."
+    @Binding var viewmodel : ViewModel
+    var comment : String = "Lorem Ipsum has been industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book . It has survived not only five centuries."
     @State var liked = false
     @State var liked_count = 254
     @State var disliked = false
     @State var disliked_count = 50
+    var profileImage : String = "ProfileImage"
+    var username : String = "username"
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
+    var isBombert : Bool = true
     var body: some View {
         HStack(alignment : .top){
-            Image("ProfileImage")
+            Image(profileImage)
                 .resizable()
                 .frame(width: 30 , height: 30)
                 .clipShape(Circle())
                 .padding(.horizontal)
-            VStack{
+            VStack(alignment: .leading){
                 HStack{
                     Text("username")
                         .font(.headline)
                     //                                        .padding(.vertical)
                     Spacer()
+                    ProfileView(total: 30, elapsed: 15, viewmodel: $viewmodel, width: 25, height: 25,image: "gauge.with.needle.fill")
                     Label("", systemImage: "ellipsis")
                         .labelsHidden()
                         .padding(.horizontal)
@@ -36,6 +41,7 @@ struct DiscussionCommentView: View {
                     .font(.callout)
                     .padding(.trailing)
                     .padding(.vertical,8)
+//                    .alignment(.leading)
                 HStack{
                     
                     Label("\(liked_count)", systemImage: liked ? "arrowshape.up.fill" :  "arrowshape.up")
@@ -93,5 +99,5 @@ struct DiscussionCommentView: View {
 }
 
 #Preview {
-    DiscussionCommentView()
+    DiscussionCommentView(viewmodel: .constant(ViewModel()))
 }

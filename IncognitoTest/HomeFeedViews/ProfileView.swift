@@ -14,6 +14,7 @@ struct ProfileView: View {
     @Binding var viewmodel : ViewModel
     var width : CGFloat = 40
     var height : CGFloat = 40
+    var image : String = "person.circle.fill"
     var body: some View {
         ZStack{
 //            Color(lightDark)
@@ -28,7 +29,7 @@ struct ProfileView: View {
                 .fill(Color(.systemRed))
                 .frame(width: width,height: height)
                 .animation(.linear, value: elapsed)
-            Label("", systemImage: "person.circle.fill")
+            Label("", systemImage: image)
                 .labelsHidden()
                 .offset(x: 5, y: -2)
                 

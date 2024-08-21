@@ -37,7 +37,7 @@ struct IncognitoView: View {
                     ScrollView(){
                         LazyVStack{
                             ForEach(0 ..< 10){_ in
-                               HomeContentView()
+                                HomeContentView(viewmodel: $viewmodel, user: $user)
                                     .foregroundStyle(Color(.white))
                             }
                         }
@@ -46,10 +46,11 @@ struct IncognitoView: View {
                     
 //                    Spacer()
 //                    Button("here"){}
-//                    CustomTabBar()
-//                        .ignoresSafeArea()
+                    CustomTabBar()
+                        
 //                        .padding(.bottom)
                 }
+                .ignoresSafeArea(edges : .bottom)
                 .scaleEffect(viewmodel.isProfileViewTapped ? 0.75 : 1.0)
                 .offset(x : viewmodel.isProfileViewTapped ? UIScreen.main.bounds.width * 0.55 : 0,y:0 )
                 if(viewmodel.isProfileViewTapped){
