@@ -50,6 +50,7 @@
 		4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700322C63746B00514FAC /* SecondSheet.swift */; };
 		4F8700352C63750E00514FAC /* BoxTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700342C63750E00514FAC /* BoxTextView.swift */; };
 		4F8700372C63ADA800514FAC /* ThirdSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8700362C63ADA800514FAC /* ThirdSheet.swift */; };
+		4FA952FF2C7886BF009AC18C /* CircularTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA952FE2C7886BF009AC18C /* CircularTimerView.swift */; };
 		4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */; };
 		4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B30D2C627C3500E868CF /* ContentView.swift */; };
 		4FB2B3102C627C3700E868CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB2B30F2C627C3700E868CF /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		4F8700322C63746B00514FAC /* SecondSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSheet.swift; sourceTree = "<group>"; };
 		4F8700342C63750E00514FAC /* BoxTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxTextView.swift; sourceTree = "<group>"; };
 		4F8700362C63ADA800514FAC /* ThirdSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSheet.swift; sourceTree = "<group>"; };
+		4FA952FE2C7886BF009AC18C /* CircularTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerView.swift; sourceTree = "<group>"; };
 		4FB2B3082C627C3500E868CF /* IncognitoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncognitoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoTestApp.swift; sourceTree = "<group>"; };
 		4FB2B30D2C627C3500E868CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				4F774B252C6D29FF007D2517 /* FeedTopBar.swift */,
 				4F774B272C6D2A2D007D2517 /* ProfileView.swift */,
+				4FA952FE2C7886BF009AC18C /* CircularTimerView.swift */,
 				4F774B292C6D658E007D2517 /* FeedType.swift */,
 				4F2F4F0A2C6E62C50041D862 /* HomeContentView.swift */,
 				4F2F4F0C2C6E63310041D862 /* ContentTopView.swift */,
@@ -209,16 +212,15 @@
 			children = (
 				4F774B242C6D29E1007D2517 /* HomeFeedViews */,
 				4F87002F2C632D0800514FAC /* Usable Views */,
-				4F8700292C630AE700514FAC /* ViewModel.swift */,
 				4FE490E62C71628400243A0D /* ReelView */,
+				4FE490EE2C7163C700243A0D /* Store */,
 				4F3098CC2C663B3700F72316 /* User.swift */,
+				4F8700292C630AE700514FAC /* ViewModel.swift */,
 				4FE490E42C7161CB00243A0D /* TabBarView.swift */,
-				4FE490E92C7162F900243A0D /* MakeReel */,
 				4FB2B30D2C627C3500E868CF /* ContentView.swift */,
 				4F3098CE2C6640CD00F72316 /* IncognitoView.swift */,
 				4F243BD92C6C6F1E00446E95 /* TopBarIncognito.swift */,
 				4FE490EC2C71635F00243A0D /* ZapView.swift */,
-				4FE490EE2C7163C700243A0D /* Store */,
 				4F8700222C63067300514FAC /* SideBarMenu */,
 				4FB2B30F2C627C3700E868CF /* Assets.xcassets */,
 				4FB2B3112C627C3700E868CF /* Preview Content */,
@@ -238,6 +240,7 @@
 		4FE490E62C71628400243A0D /* ReelView */ = {
 			isa = PBXGroup;
 			children = (
+				4FE490E92C7162F900243A0D /* MakeReel */,
 				4FE490E72C71629400243A0D /* ReelView.swift */,
 			);
 			path = ReelView;
@@ -361,6 +364,7 @@
 				4FE490F42C73CD3F00243A0D /* DiscussionCommentView.swift in Sources */,
 				4F2F4F0D2C6E63310041D862 /* ContentTopView.swift in Sources */,
 				4FE490F22C73C09300243A0D /* DiscussionView.swift in Sources */,
+				4FA952FF2C7886BF009AC18C /* CircularTimerView.swift in Sources */,
 				4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */,
 				4F87002A2C630AE700514FAC /* ViewModel.swift in Sources */,
 				4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */,

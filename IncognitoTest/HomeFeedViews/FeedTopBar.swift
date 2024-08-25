@@ -12,7 +12,7 @@ struct FeedTopBar: View {
     @Binding var viewmodel : ViewModel
     var body: some View {
         HStack{
-            ProfileView(total: 30 , elapsed: elapsed , viewmodel: $viewmodel)
+            ProfileView(total: 150 , elapsed: elapsed , viewmodel: $viewmodel)
                 .padding(.horizontal)
                 .padding(.leading,3)
             Text("Incognito")

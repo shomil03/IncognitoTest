@@ -24,8 +24,8 @@ struct IncognitoTestApp: App {
         @State var viewmodel = ViewModel()
         @State var user = User()
         WindowGroup {
-//            ContentView()
-            IncognitoView(viewmodel: $viewmodel, user: $user)
+            ContentView()
+//            IncognitoView(viewmodel: $viewmodel, user: $user)
         }
     }
 }

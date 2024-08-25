@@ -17,52 +17,60 @@ struct DiscussionCommentView: View {
     var profileImage : String = "ProfileImage"
     var username : String = "username"
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
-    var isBombert : Bool = true
+    var isBomber : Bool = true
+    var totalTime = 60.0
+    var remainingTime = 60.0
     var body: some View {
-        HStack(alignment : .top){
-            Image(profileImage)
-                .resizable()
-                .frame(width: 30 , height: 30)
-                .clipShape(Circle())
-                .padding(.horizontal)
-            VStack(alignment: .leading){
-                HStack{
-                    Text("username")
-                        .font(.headline)
-                    //                                        .padding(.vertical)
-                    Spacer()
-                    ProfileView(total: 30, elapsed: 15, viewmodel: $viewmodel, width: 25, height: 25,image: "gauge.with.needle.fill")
-                    Label("", systemImage: "ellipsis")
-                        .labelsHidden()
-                        .padding(.horizontal)
-                }
-//                .padding(.top)
-                Text(comment)
-                    .font(.callout)
-                    .padding(.trailing)
-                    .padding(.vertical,8)
-//                    .alignment(.leading)
-                HStack{
-                    
-                    Label("\(liked_count)", systemImage: liked ? "arrowshape.up.fill" :  "arrowshape.up")
-                        .font(.caption)
-                        .foregroundStyle(liked ? Color(.green) : Color(.white))
-                        .onTapGesture {
-                            liked.toggle()
-                            if(liked){
-                                liked_count += 1
-                                if(disliked){
-                                    disliked_count -= 1
-                                }
-                                disliked = false
-                            }
-                            else{
-                                liked_count -= 1
-                            }
+        ZStack{
+            Color(lightDark)
+                .ignoresSafeArea()
+            HStack(alignment : .top){
+                Image(profileImage)
+                    .resizable()
+                    .frame(width: 30 , height: 30)
+                    .clipShape(Circle())
+                    .padding(.horizontal)
+                VStack(alignment: .leading){
+                    HStack{
+                        Text(username)
+                            .font(.headline)
+                        //                                        .padding(.vertical)
+                        Spacer()
+                        if(isBomber){
+                            CircularTimerView(total: 60, elapsed: totalTime-remainingTime, viewmodel: $viewmodel, width: 25, height: 25, image: "person")
+//                            ProfileView(total: totalTime, elapsed: totalTime - remainingTime, viewmodel: $viewmodel, width: 25, height: 25,image: "gauge.with.needle.fill")
                         }
-                    Spacer()
-                    Label("\(disliked_count)" , systemImage: disliked ?
-                          "arrowshape.down.fill" : "arrowshape.down")
+                        Label("", systemImage: "ellipsis")
+                            .labelsHidden()
+                            .padding(.horizontal)
+                    }
+                    //                .padding(.top)
+                    Text(comment)
+                        .font(.callout)
+                        .padding(.trailing)
+                        .padding(.vertical,8)
+                    //                    .alignment(.leading)
+                    HStack{
+                        
+                        Label("\(liked_count)", systemImage: liked ? "arrowshape.up.fill" :  "arrowshape.up")
+                            .font(.caption)
+                            .foregroundStyle(liked ? Color(.green) : Color(.white))
+                            .onTapGesture {
+                                liked.toggle()
+                                if(liked){
+                                    liked_count += 1
+                                    if(disliked){
+                                        disliked_count -= 1
+                                    }
+                                    disliked = false
+                                }
+                                else{
+                                    liked_count -= 1
+                                }
+                            }
+                        Spacer()
+                        Label("\(disliked_count)" , systemImage: disliked ?
+                              "arrowshape.down.fill" : "arrowshape.down")
                         .font(.caption)
                         .foregroundStyle(disliked ? Color(.red) : Color(.white))
                         .onTapGesture {
@@ -78,23 +86,27 @@ struct DiscussionCommentView: View {
                                 disliked_count -= 1
                             }
                         }
-                    Spacer()
-                    Label("", systemImage: "square.and.arrow.up")
-                        .labelsHidden()
-                        .font(.caption)
-                    Spacer()
-                    NavigationLink("show this discussion", destination: ContentUnavailableView("Not available right now", image: ""))
-                        .font(.caption)
-                        .foregroundStyle(Color(.blue))
-                    Spacer()
+                        Spacer()
+                        Label("", systemImage: "square.and.arrow.up")
+                            .labelsHidden()
+                            .font(.caption)
+                        Spacer()
+                        NavigationLink("show this discussion", destination: ContentUnavailableView("Not available right now", image: ""))
+                            .font(.caption)
+                            .foregroundStyle(Color(.blue))
+                        Spacer()
+                    }
+                    .animation(.easeIn, value: liked)
+                    .animation(.easeIn, value: disliked)
                 }
-                .animation(.easeIn, value: liked)
-                .animation(.easeIn, value: disliked)
             }
+            .onAppear{
+                print("bomber Remaining time \(remainingTime) total time \(totalTime)")
+            }
+            .foregroundStyle(Color(.white))
+            .padding(.vertical)
+            .background(Color(lightDark))
         }
-        .foregroundStyle(Color(.white))
-        .padding(.vertical)
-        .background(Color(lightDark))
     }
 }
 

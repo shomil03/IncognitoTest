@@ -21,7 +21,6 @@ struct ThirdSheet: View {
         }
         .onTapGesture{
             user.incognitoStarted = true
-            viewmodel.startTimer = true
         }
     }
 }

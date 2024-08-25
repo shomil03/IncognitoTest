@@ -11,7 +11,7 @@ struct SideBarProfile: View {
     @Binding var viewmodel : ViewModel
     var body: some View {
         HStack{
-            ProfileView(viewmodel: $viewmodel,width: CGFloat(60) , height: CGFloat(60))
+            ProfileView(elapsed: 150-viewmodel.cooldownTime, viewmodel: $viewmodel,width: CGFloat(60) , height: CGFloat(60))
 //                .resizable()
 //                .frame(width: 60 , height: 60)
 //                .padding(.horizontal)

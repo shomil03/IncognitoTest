@@ -10,8 +10,8 @@ import SwiftUI
 struct DiscussionView: View {
     @Binding var viewmodel : ViewModel
     @Binding var user : User
-    @State var bomberComments : [String] = []
-    @State var normalComments : [String] = []
+//    var bomberComments : [String] = []
+//    var normalComments : [String] = []
     var body: some View {
         NavigationStack{
             VStack(spacing: 0){
@@ -20,12 +20,21 @@ struct DiscussionView: View {
 //                        ForEach(0..<5 , id: \.self){_ in
 //                            DiscussionCommentView()
 //                        }
-                        ForEach(0..<bomberComments.count ,id : \.self ){index in
-                            DiscussionCommentView(viewmodel: $viewmodel, comment : bomberComments[index] , profileImage: "ProfileImage", username: "anonymous")
-//                            Text(bomberComments[index])
+//                        ForEach(0..<user.bomberComments.count ,id : \.self ){index in
+////                            withAnimation{
+//                                DiscussionCommentView(viewmodel: $viewmodel, comment : user.bomberComments[index] , profileImage: "ProfileImage", username: "anonymous")
+////                            }
+////                            Text(bomberComments[index])
+//                        }
+//                        ForEach(viewmodel.bombe)
+                        ForEach(user.bomberComments){comment in
+//                            Text(comment.text)
+                            DiscussionCommentView(viewmodel: $viewmodel, comment: comment.text, profileImage: "Memoji", username: "anonymous", isBomber: true,totalTime: 60 , remainingTime: comment.remainingTime)
                         }
-                        ForEach(0..<normalComments.count , id: \.self){index in
-                            DiscussionCommentView(viewmodel: $viewmodel, comment: normalComments[index], profileImage: "ProfileImage", username: "username")
+                        ForEach(0..<user.normalComments.count , id: \.self){index in
+//                            withAnimation{
+                            DiscussionCommentView(viewmodel: $viewmodel, comment: user.normalComments[index], profileImage: "ProfileImage", username: "username" , isBomber: false)
+//                            }
                         }
                     }
                 }
@@ -34,13 +43,18 @@ struct DiscussionView: View {
             }
             .ignoresSafeArea(edges : .bottom)
             .onAppear{
-                user.fetchValidBomberComments(completion: {comments in
-                    bomberComments = comments
-                    print(bomberComments)
-                })
-                user.fetchNormalComments(completion: {comments in
-                    normalComments = comments
-                })
+//                user.fetchValidBomberComments(completion: {comments in
+////                    bomberComments = comments
+////                    print(bomberComments)
+//                })
+                Task{
+                    user.loadValidBomberComments()
+                    let comment = await user.fetchNormalComments()
+                }
+//                user.loadValidBomberComments()
+//                user.fetchNormalComments(completion: {comments in
+//                    normalComments = comments
+//                })
             }
             
         }

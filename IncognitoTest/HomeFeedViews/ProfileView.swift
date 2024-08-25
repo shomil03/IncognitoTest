@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ProfileView: View {
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
-    var total : Double = 30
+    var total : Double = 150
     var elapsed : Double = 15
     @Binding var viewmodel : ViewModel
     var width : CGFloat = 40
     var height : CGFloat = 40
     var image : String = "person.circle.fill"
+//    var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         ZStack{
 //            Color(lightDark)
@@ -29,6 +30,9 @@ struct ProfileView: View {
                 .fill(Color(.systemRed))
                 .frame(width: width,height: height)
                 .animation(.linear, value: elapsed)
+//                .onReceive(timer){_ in 
+//                    elapsed += 1
+//                }
             Label("", systemImage: image)
                 .labelsHidden()
                 .offset(x: 5, y: -2)

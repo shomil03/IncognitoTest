@@ -48,9 +48,15 @@ class ViewModel {
     var sheetType : SheetTypes?
     var startTimer = false
     var timer: Timer = Timer()
-    var cooldownTime = 0
+    var cooldownTime : TimeInterval = 0.0
     var selectedFeedType : feedType = .main
     var givenIncognitoTime = 90
     var isProfileViewTapped = false
+    
 
+}
+struct BomberComment: Identifiable {
+    let id: String
+    let text: String
+    var remainingTime: TimeInterval
 }

@@ -20,53 +20,57 @@ struct IncognitoView: View {
                 Color(lightDark)
                     .ignoresSafeArea()
                     .onReceive(timer){_ in
-                        coolDown -= 1
-                        print(coolDown)
-                        if(coolDown <= 0){
+                        viewmodel.cooldownTime -= 1
+                        print(viewmodel.cooldownTime)
+                        if(viewmodel.cooldownTime <= 0){
                             user.incognitoStarted = false
                         }
                     }
-                
-                VStack {
-//                    Text("\(coolDown)")
-                    FeedTopBar(elapsed: 30-coolDown, viewmodel: $viewmodel)
+                if(user.isLoading){
+                    ProgressView()
+                }
+                else{
+                    VStack {
+                        //                    Text("\(coolDown)")
+                        FeedTopBar(elapsed: 150-viewmodel.cooldownTime, viewmodel: $viewmodel)
                             .padding(.bottom)
                         FeedType()
                             .foregroundStyle(Color(.white))
                             .padding(.bottom)
-                    ScrollView(){
-                        LazyVStack{
-                            ForEach(0 ..< 10){_ in
-                                HomeContentView(viewmodel: $viewmodel, user: $user)
-                                    .foregroundStyle(Color(.white))
+                        ScrollView(){
+                            LazyVStack{
+                                ForEach(0 ..< 10){_ in
+                                    HomeContentView(viewmodel: $viewmodel, user: $user)
+                                        .foregroundStyle(Color(.white))
+                                }
                             }
                         }
+                        .scrollIndicators(.hidden)
+                        
+                        //                    Spacer()
+                        //                    Button("here"){}
+                        CustomTabBar()
+                        
+                        //                        .padding(.bottom)
                     }
-                    .scrollIndicators(.hidden)
+                    .ignoresSafeArea(edges : .bottom)
+                    .scaleEffect(viewmodel.isProfileViewTapped ? 0.75 : 1.0)
+                    .offset(x : viewmodel.isProfileViewTapped ? UIScreen.main.bounds.width * 0.55 : 0,y:0 )
+                    if(viewmodel.isProfileViewTapped){
+                        HStack{
+                            SideBarMenu(viewmodel: $viewmodel)
+                            
+                            
+                            Color.primary.opacity(0.01)
+                                .ignoresSafeArea()
+                                .onTapGesture {
+                                    viewmodel.isProfileViewTapped = false
+                                }
+                        }
+                        .transition(.move(edge: .leading))
+                    }
                     
-//                    Spacer()
-//                    Button("here"){}
-                    CustomTabBar()
-                        
-//                        .padding(.bottom)
                 }
-                .ignoresSafeArea(edges : .bottom)
-                .scaleEffect(viewmodel.isProfileViewTapped ? 0.75 : 1.0)
-                .offset(x : viewmodel.isProfileViewTapped ? UIScreen.main.bounds.width * 0.55 : 0,y:0 )
-                if(viewmodel.isProfileViewTapped){
-                    HStack{
-                        SideBarMenu(viewmodel: $viewmodel)
-                        
-                        
-                        Color.primary.opacity(0.01)
-                            .ignoresSafeArea()
-                            .onTapGesture {
-                                viewmodel.isProfileViewTapped = false
-                            }
-                    }
-                    .transition(.move(edge: .leading))
-                }
-                
             }
 //            .toolbar{
 //                ToolbarItem(placement: .bottomBar){
@@ -75,7 +79,9 @@ struct IncognitoView: View {
 //            }
             .animation(.spring , value: viewmodel.isProfileViewTapped)
             .onAppear{
-                coolDown = user.calculateTimeDifferences()
+                Task{
+                    viewmodel.cooldownTime = await user.calculateTimeDifferences()
+                }
             }
         }
     }

@@ -29,7 +29,8 @@ struct CustomTextFieldView: View {
             TextField("", text: $input)
                 .onSubmit {
 //                    user.saveComment(input , incognitoMode:viewmodel.selectedIncognitoType )
-                    user.saveComment(input, incognitoMode: .bomber)
+                    user.saveComment(input, incognitoMode: viewmodel.selectedIncognitoType)
+                    input = ""
                 }
                 .foregroundStyle(Color(.white))
             Image(systemName: "photo")
