@@ -40,10 +40,10 @@ struct CircularTimerView: View {
         }
         .onAppear{
             print("bomber elapsed Time = \(elapsed)")
-            if(elapsed < 0){
-                total += abs(elapsed)
-                elapsed = abs(elapsed)
-            }
+//            if(elapsed < 0){
+//                total += abs(elapsed)
+//                elapsed = abs(elapsed)
+//            }
         }
     }
 }

@@ -28,8 +28,8 @@ struct CustomTextFieldView: View {
             }
             TextField("", text: $input)
                 .onSubmit {
-//                    user.saveComment(input , incognitoMode:viewmodel.selectedIncognitoType )
-                    user.saveComment(input, incognitoMode: viewmodel.selectedIncognitoType)
+                    user.saveComment(input , incognitoMode:viewmodel.selectedIncognitoType )
+                    user.loadValidBomberComments()
                     input = ""
                 }
                 .foregroundStyle(Color(.white))

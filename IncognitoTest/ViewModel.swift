@@ -34,7 +34,14 @@ enum IncognitoModeTypes : String , Identifiable{
 //    case none
 }
 @Observable
-class ViewModel {
+class ViewModel : Hashable , Identifiable {
+    static func == (lhs: ViewModel, rhs: ViewModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
     var opacity = 0.1
     var viewDisabled = false
     var isShowingSideMenu = false{
@@ -52,7 +59,7 @@ class ViewModel {
     var selectedFeedType : feedType = .main
     var givenIncognitoTime = 90
     var isProfileViewTapped = false
-    
+    var dismissViews = false
 
 }
 struct BomberComment: Identifiable {

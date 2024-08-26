@@ -12,9 +12,11 @@ struct IncognitoView: View {
     @Binding var user : User
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var coolDown = 30.0
+    @State private var navigationPath = NavigationPath()
     var lightDark = Color(red: 32/255, green: 32/255, blue: 32/255)
+    @Environment(\.dismiss) var dismiss
     var body: some View {
-        NavigationStack{
+        NavigationStack(path : $navigationPath){
             ZStack{
                 
                 Color(lightDark)
@@ -24,6 +26,11 @@ struct IncognitoView: View {
                         print(viewmodel.cooldownTime)
                         if(viewmodel.cooldownTime <= 0){
                             user.incognitoStarted = false
+                            print("changing viewmodel dismiss views")
+                            viewmodel.dismissViews = true
+//                            DiscussionView(viewmodel: $viewmodel, user: $user)
+                            navigationPath.removeLast()
+                            dismiss()
                         }
                     }
                 if(user.isLoading){
@@ -40,7 +47,7 @@ struct IncognitoView: View {
                         ScrollView(){
                             LazyVStack{
                                 ForEach(0 ..< 10){_ in
-                                    HomeContentView(viewmodel: $viewmodel, user: $user)
+                                    HomeContentView(viewmodel: $viewmodel, user: $user, navigationPath: $navigationPath)
                                         .foregroundStyle(Color(.white))
                                 }
                             }
@@ -70,19 +77,27 @@ struct IncognitoView: View {
                         .transition(.move(edge: .leading))
                     }
                     
+                    
                 }
+                
             }
+            
 //            .toolbar{
 //                ToolbarItem(placement: .bottomBar){
 //                    CustomTabBar()
-////                }
+//                }
 //            }
             .animation(.spring , value: viewmodel.isProfileViewTapped)
             .onAppear{
                 Task{
                     viewmodel.cooldownTime = await user.calculateTimeDifferences()
                 }
+                
             }
+            .navigationDestination(for: DiscussionView.self) { discussionView in
+                discussionView
+            }
+            
         }
     }
     func printh(){

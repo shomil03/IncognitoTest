@@ -14,10 +14,11 @@ struct SideBarLabels: View {
         HStack{
             Image(systemName: image)
                 .resizable()
-                .frame(width: 30,height: 30)
+                .scaledToFit()
+                .frame(width: 23,height: 23)
                 .padding(.horizontal)
             Text(text)
-                .font(.title3)
+                .font(.headline)
                 .fontWeight(.medium)
         }
     }

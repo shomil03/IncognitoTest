@@ -12,12 +12,19 @@ import SwiftUI
 
 
 @Observable
-class User{
+class User : Hashable , Identifiable{
 //    struct BomberComment: Identifiable {
 //        let id: String
 //        let text: String
 //        var remainingTime: TimeInterval
 //    }
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
     let db = Firestore.firestore()
     let uuid = UUID()
     var remainingTime = 5.0
@@ -421,7 +428,9 @@ class User{
     }
 
     func fetchValidBomberComments() async -> [BomberComment] {
+        print("starting")
         do {
+            
             bomberComments = []
             let documents = try await db.collection("bomberComments").getDocuments().documents
             let currentTime = try await getCurrentServerDate()
@@ -447,6 +456,7 @@ class User{
             }
             
             self.bomberComments = validComments
+            print("Bomber comments = \(bomberComments)")
             return validComments
             
         } catch {
@@ -553,8 +563,9 @@ class User{
 //    }
 
     func loadValidBomberComments() {
+        print("in loadValidBomberComments")
         Task{
-            fetchValidBomberComments
+            await fetchValidBomberComments()
         }
 //        fetchValidBomberComments { comments in
 //            DispatchQueue.main.async {
@@ -625,7 +636,7 @@ class User{
                 print("Error deleting bomber comment: \(error.localizedDescription)")
             } else {
                 Task{
-                    fetchValidBomberComments
+                    await fetchValidBomberComments()
                 }
 //                self.fetchValidBomberComments(completion: {comment in
 //                })

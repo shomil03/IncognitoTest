@@ -24,7 +24,7 @@ struct SideBarMenu: View {
                         
 //                            .foregroundStyle(Color.white)
 //                    }
-                    VStack(alignment: .leading,spacing: 30){SideBarIncognito(viewmodel: viewmodel)
+                    VStack(alignment: .leading,spacing: 25){SideBarIncognito(viewmodel: viewmodel)
                         SideBarLabels(image: "rotate.3d.fill" , text: "Abilities")
                         SideBarLabels(image: "chart.xyaxis.line", text: "Analytics")
                         SideBarLabels(image: "stopwatch", text: "Your Activity")
@@ -37,13 +37,17 @@ struct SideBarMenu: View {
                         SideBarLabels(image: "wallet.pass.fill", text: "Wallet")
                     }
                     .foregroundStyle(Color(.white))
-                    .font(.title3)
+                    .font(.subheadline)
                     .fontWeight(.medium)
 //                    .padding(10)
                     Spacer()
 //                    Button("Tap me \(count)"){
 //                        count+=1
 //                    }
+                    VStack{
+                        SideBarLabels(image: "gear", text: "Settings")
+                    }
+                    .padding(.trailing)
                 }
                 .frame(width: 270)
                 .background(Color.black)

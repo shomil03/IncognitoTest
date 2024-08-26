@@ -13,10 +13,11 @@ struct SideBarIncognito: View {
         HStack{
             Image(systemName: "eye.slash.circle.fill")
                 .resizable()
-                .frame(width: 30,height: 30)
+                .scaledToFit()
+                .frame(width: 23,height: 23)
                 .padding(.horizontal)
             Text("Incognito")
-                .font(.title3)
+                .font(.headline)
                 .fontWeight(.medium)
         }
         .onTapGesture {

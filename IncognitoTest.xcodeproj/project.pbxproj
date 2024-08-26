@@ -143,14 +143,14 @@
 		4F774B242C6D29E1007D2517 /* HomeFeedViews */ = {
 			isa = PBXGroup;
 			children = (
-				4F774B252C6D29FF007D2517 /* FeedTopBar.swift */,
 				4F774B272C6D2A2D007D2517 /* ProfileView.swift */,
 				4FA952FE2C7886BF009AC18C /* CircularTimerView.swift */,
 				4F774B292C6D658E007D2517 /* FeedType.swift */,
-				4F2F4F0A2C6E62C50041D862 /* HomeContentView.swift */,
+				4F774B252C6D29FF007D2517 /* FeedTopBar.swift */,
 				4F2F4F0C2C6E63310041D862 /* ContentTopView.swift */,
 				4F2F4F102C6F47BB0041D862 /* ContentCommentView.swift */,
 				4F2F4F0E2C6F2AF70041D862 /* ContentBottomView.swift */,
+				4F2F4F0A2C6E62C50041D862 /* HomeContentView.swift */,
 				4FE490F12C73C09300243A0D /* DiscussionView.swift */,
 				4FE490F72C74585100243A0D /* CustomTextFieldView.swift */,
 				4FE490F52C73EDCD00243A0D /* CustomTabBar.swift */,

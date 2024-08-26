@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeContentView: View {
     @Binding var viewmodel : ViewModel
     @Binding var user : User
+    @Binding var navigationPath : NavigationPath
     var body: some View {
         VStack{
             ContentTopView()
@@ -17,7 +18,7 @@ struct HomeContentView: View {
             RoundedRectangle(cornerRadius: 25.0)
                 .frame(maxWidth: .infinity , minHeight: 250 , idealHeight: 300 , maxHeight: 350)
                 .padding()
-            ContentBottomView(viewmodel: $viewmodel, user: $user)
+            ContentBottomView(viewmodel: $viewmodel, user: $user, navigationPath: $navigationPath)
 //                .padding(.vertical)
             ContentCommentView()
                 .padding()
@@ -26,5 +27,5 @@ struct HomeContentView: View {
 }
 
 #Preview {
-    HomeContentView(viewmodel: .constant(ViewModel()), user: .constant(User()))
+    HomeContentView(viewmodel: .constant(ViewModel()), user: .constant(User()), navigationPath: .constant(NavigationPath()))
 }
