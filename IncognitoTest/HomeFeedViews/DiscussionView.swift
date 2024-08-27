@@ -48,6 +48,7 @@ struct DiscussionView: View  , Hashable{
                             }
                         }
                         CustomTextFieldView(user: $user, viewmodel: $viewmodel)
+                            .padding(.bottom)
                         
                     }
                     .ignoresSafeArea(edges : .bottom)

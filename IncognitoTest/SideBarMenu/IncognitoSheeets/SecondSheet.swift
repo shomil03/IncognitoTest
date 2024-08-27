@@ -44,7 +44,7 @@ struct SecondSheet: View {
                 
                 TimeSpanView()
                     .padding(.horizontal)
-                    .padding(.vertical)
+//                    .padding(.vertical)
                     .foregroundStyle(Color.white)
                 
                 Button(action: {
