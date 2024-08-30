@@ -29,7 +29,9 @@ struct IncognitoView: View {
                             print("changing viewmodel dismiss views")
                             viewmodel.dismissViews = true
 //                            DiscussionView(viewmodel: $viewmodel, user: $user)
-                            navigationPath.removeLast()
+                            if(navigationPath.count > 0){
+                                navigationPath.removeLast()
+                            }
                             dismiss()
                         }
                     }

@@ -42,6 +42,9 @@
 		4F344D152C7D86EA00ADA85A /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F344D142C7D86EA00ADA85A /* TitleView.swift */; };
 		4F344D172C7D8D9400ADA85A /* AITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F344D162C7D8D9400ADA85A /* AITextField.swift */; };
 		4F3F32042C7E117A0044A942 /* PromptStylePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3F32032C7E117A0044A942 /* PromptStylePicker.swift */; };
+		4F581BB12C7FFF3900244770 /* KeywordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F581BB02C7FFF3800244770 /* KeywordsView.swift */; };
+		4F581BB32C80AECB00244770 /* CreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F581BB22C80AECB00244770 /* CreatorView.swift */; };
+		4F581BB52C80B0E600244770 /* CollaboratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F581BB42C80B0E600244770 /* CollaboratorView.swift */; };
 		4F774B262C6D29FF007D2517 /* FeedTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F774B252C6D29FF007D2517 /* FeedTopBar.swift */; };
 		4F774B282C6D2A2D007D2517 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F774B272C6D2A2D007D2517 /* ProfileView.swift */; };
 		4F774B2A2C6D658E007D2517 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F774B292C6D658E007D2517 /* FeedType.swift */; };
@@ -57,11 +60,16 @@
 		4F9D3D8D2C7E68960019B1E4 /* ArtBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D3D8C2C7E68960019B1E4 /* ArtBoardView.swift */; };
 		4F9D3D8F2C7E6B3B0019B1E4 /* AIResultSizePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D3D8E2C7E6B3B0019B1E4 /* AIResultSizePicker.swift */; };
 		4F9D3D912C7E6F5B0019B1E4 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D3D902C7E6F5B0019B1E4 /* CustomButtonView.swift */; };
+		4F9D3D942C7E72050019B1E4 /* ProfileViewAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D3D932C7E72050019B1E4 /* ProfileViewAI.swift */; };
+		4F9D3D962C7E740A0019B1E4 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D3D952C7E740A0019B1E4 /* ProfileDetailView.swift */; };
+		4F9D3D982C7E83430019B1E4 /* AIProfileFeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D3D972C7E83430019B1E4 /* AIProfileFeedType.swift */; };
 		4FA952FF2C7886BF009AC18C /* CircularTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA952FE2C7886BF009AC18C /* CircularTimerView.swift */; };
 		4FB2B30C2C627C3500E868CF /* IncognitoTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */; };
 		4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB2B30D2C627C3500E868CF /* ContentView.swift */; };
 		4FB2B3102C627C3700E868CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB2B30F2C627C3700E868CF /* Assets.xcassets */; };
 		4FB2B3132C627C3700E868CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FB2B3122C627C3700E868CF /* Preview Assets.xcassets */; };
+		4FBC851F2C7EE3AD0062FD83 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC851E2C7EE3AD0062FD83 /* ResultView.swift */; };
+		4FBC85212C7F1E890062FD83 /* ResultTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBC85202C7F1E890062FD83 /* ResultTitleView.swift */; };
 		4FD8F5AB2C7DB1D0008CB7FF /* SubtitleSelectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8F5AA2C7DB1D0008CB7FF /* SubtitleSelectors.swift */; };
 		4FE490E52C7161CB00243A0D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490E42C7161CB00243A0D /* TabBarView.swift */; };
 		4FE490E82C71629400243A0D /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE490E72C71629400243A0D /* ReelView.swift */; };
@@ -88,6 +96,9 @@
 		4F344D142C7D86EA00ADA85A /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		4F344D162C7D8D9400ADA85A /* AITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITextField.swift; sourceTree = "<group>"; };
 		4F3F32032C7E117A0044A942 /* PromptStylePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptStylePicker.swift; sourceTree = "<group>"; };
+		4F581BB02C7FFF3800244770 /* KeywordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsView.swift; sourceTree = "<group>"; };
+		4F581BB22C80AECB00244770 /* CreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorView.swift; sourceTree = "<group>"; };
+		4F581BB42C80B0E600244770 /* CollaboratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaboratorView.swift; sourceTree = "<group>"; };
 		4F774B252C6D29FF007D2517 /* FeedTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopBar.swift; sourceTree = "<group>"; };
 		4F774B272C6D2A2D007D2517 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4F774B292C6D658E007D2517 /* FeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedType.swift; sourceTree = "<group>"; };
@@ -103,12 +114,17 @@
 		4F9D3D8C2C7E68960019B1E4 /* ArtBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtBoardView.swift; sourceTree = "<group>"; };
 		4F9D3D8E2C7E6B3B0019B1E4 /* AIResultSizePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIResultSizePicker.swift; sourceTree = "<group>"; };
 		4F9D3D902C7E6F5B0019B1E4 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		4F9D3D932C7E72050019B1E4 /* ProfileViewAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewAI.swift; sourceTree = "<group>"; };
+		4F9D3D952C7E740A0019B1E4 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
+		4F9D3D972C7E83430019B1E4 /* AIProfileFeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProfileFeedType.swift; sourceTree = "<group>"; };
 		4FA952FE2C7886BF009AC18C /* CircularTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimerView.swift; sourceTree = "<group>"; };
 		4FB2B3082C627C3500E868CF /* IncognitoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IncognitoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FB2B30B2C627C3500E868CF /* IncognitoTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncognitoTestApp.swift; sourceTree = "<group>"; };
 		4FB2B30D2C627C3500E868CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FB2B30F2C627C3700E868CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FB2B3122C627C3700E868CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FBC851E2C7EE3AD0062FD83 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		4FBC85202C7F1E890062FD83 /* ResultTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTitleView.swift; sourceTree = "<group>"; };
 		4FD8F5AA2C7DB1D0008CB7FF /* SubtitleSelectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleSelectors.swift; sourceTree = "<group>"; };
 		4FE490E42C7161CB00243A0D /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		4FE490E72C71629400243A0D /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
@@ -159,6 +175,8 @@
 		4F344D112C7D853400ADA85A /* VasukamAI */ = {
 			isa = PBXGroup;
 			children = (
+				4FBC851D2C7EE3760062FD83 /* ResultView */,
+				4F9D3D922C7E71EA0019B1E4 /* ProfileViewAI */,
 				4F344D122C7D86B100ADA85A /* AISearchView.swift */,
 				4F9D3D902C7E6F5B0019B1E4 /* CustomButtonView.swift */,
 				4F9D3D8E2C7E6B3B0019B1E4 /* AIResultSizePicker.swift */,
@@ -221,6 +239,16 @@
 			path = "Usable Views";
 			sourceTree = "<group>";
 		};
+		4F9D3D922C7E71EA0019B1E4 /* ProfileViewAI */ = {
+			isa = PBXGroup;
+			children = (
+				4F9D3D932C7E72050019B1E4 /* ProfileViewAI.swift */,
+				4F9D3D972C7E83430019B1E4 /* AIProfileFeedType.swift */,
+				4F9D3D952C7E740A0019B1E4 /* ProfileDetailView.swift */,
+			);
+			path = ProfileViewAI;
+			sourceTree = "<group>";
+		};
 		4FB2B2FF2C627C3500E868CF = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +295,18 @@
 				4FB2B3122C627C3700E868CF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FBC851D2C7EE3760062FD83 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				4FBC851E2C7EE3AD0062FD83 /* ResultView.swift */,
+				4FBC85202C7F1E890062FD83 /* ResultTitleView.swift */,
+				4F581BB02C7FFF3800244770 /* KeywordsView.swift */,
+				4F581BB22C80AECB00244770 /* CreatorView.swift */,
+				4F581BB42C80B0E600244770 /* CollaboratorView.swift */,
+			);
+			path = ResultView;
 			sourceTree = "<group>";
 		};
 		4FE490E62C71628400243A0D /* ReelView */ = {
@@ -397,14 +437,18 @@
 				4F3F32042C7E117A0044A942 /* PromptStylePicker.swift in Sources */,
 				4F2F4F0D2C6E63310041D862 /* ContentTopView.swift in Sources */,
 				4FE490F22C73C09300243A0D /* DiscussionView.swift in Sources */,
+				4F581BB32C80AECB00244770 /* CreatorView.swift in Sources */,
 				4FA952FF2C7886BF009AC18C /* CircularTimerView.swift in Sources */,
 				4F8700332C63746B00514FAC /* SecondSheet.swift in Sources */,
 				4F87002A2C630AE700514FAC /* ViewModel.swift in Sources */,
 				4FB2B30E2C627C3500E868CF /* ContentView.swift in Sources */,
 				4F8700312C632D3B00514FAC /* ButtonView.swift in Sources */,
 				4FE490E82C71629400243A0D /* ReelView.swift in Sources */,
+				4F581BB12C7FFF3900244770 /* KeywordsView.swift in Sources */,
 				4FE490ED2C71635F00243A0D /* ZapView.swift in Sources */,
+				4F9D3D962C7E740A0019B1E4 /* ProfileDetailView.swift in Sources */,
 				4F3098CF2C6640CD00F72316 /* IncognitoView.swift in Sources */,
+				4FBC851F2C7EE3AD0062FD83 /* ResultView.swift in Sources */,
 				4F2F4F0F2C6F2AF70041D862 /* ContentBottomView.swift in Sources */,
 				4F8700282C6307F800514FAC /* SideBarIncognito.swift in Sources */,
 				4F243BDA2C6C6F1E00446E95 /* TopBarIncognito.swift in Sources */,
@@ -413,12 +457,16 @@
 				4F774B282C6D2A2D007D2517 /* ProfileView.swift in Sources */,
 				4F2F4F112C6F47BB0041D862 /* ContentCommentView.swift in Sources */,
 				4FE490E52C7161CB00243A0D /* TabBarView.swift in Sources */,
+				4F9D3D942C7E72050019B1E4 /* ProfileViewAI.swift in Sources */,
 				4F2F4F0B2C6E62C50041D862 /* HomeContentView.swift in Sources */,
 				4F8700372C63ADA800514FAC /* ThirdSheet.swift in Sources */,
 				4F8700262C6306A800514FAC /* SideBarProfile.swift in Sources */,
 				4F9D3D8D2C7E68960019B1E4 /* ArtBoardView.swift in Sources */,
+				4F9D3D982C7E83430019B1E4 /* AIProfileFeedType.swift in Sources */,
 				4FE490F02C7163D100243A0D /* StoreView.swift in Sources */,
 				4F3098CD2C663B3700F72316 /* User.swift in Sources */,
+				4F581BB52C80B0E600244770 /* CollaboratorView.swift in Sources */,
+				4FBC85212C7F1E890062FD83 /* ResultTitleView.swift in Sources */,
 				4F87002E2C63287900514FAC /* FirstSheet.swift in Sources */,
 				4FE490F82C74585100243A0D /* CustomTextFieldView.swift in Sources */,
 				4FD8F5AB2C7DB1D0008CB7FF /* SubtitleSelectors.swift in Sources */,
