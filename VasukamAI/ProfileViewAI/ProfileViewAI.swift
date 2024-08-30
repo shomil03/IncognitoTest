@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileViewAI: View {
     var color1 = Color(red: 234/255, green: 148/255, blue: 232/255)
     var color2 = Color(red: 131/255, green: 175/255, blue: 235/255)
-    var imageArray = ["Image5" , "Image6" , "Image7" , "Image8" , "Image9" , "Image10" , "Image11" , "Image12" , "Image13"]
+    var images = ["Image5" , "Image6" , "Image7" , "Image8" , "Image9" , "Image10" , "Image11" , "Image12" , "Image13"]
     var body: some View {
         ZStack {
             Color(.black)
@@ -34,19 +34,30 @@ struct ProfileViewAI: View {
                 AIProfileFeedType()
                 
                 ScrollView(.vertical){
-                    LazyVGrid(columns: [GridItem(.flexible()),
-                                        GridItem(.flexible()),
-                                        GridItem(.flexible())]){
-                        ForEach(imageArray , id: \.self){imageName in
-                            Image(imageName)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .clipped()
+                    HStack(alignment : .top){
+                        VStack{
+                            ForEach(images , id: \.self){image in
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(minWidth: 0 , maxWidth: .infinity)
+                                    .frame(height: CGFloat.random(in: 140...400))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
                         }
-                        
+                        VStack{
+                            ForEach(images , id: \.self){image in
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(minWidth: 0 , maxWidth: .infinity)
+                                    .frame(height: CGFloat.random(in: 140...400))
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                        }
+
                     }
                 }
-                
             }
             .padding()
         }
